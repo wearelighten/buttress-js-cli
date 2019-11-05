@@ -4,7 +4,9 @@
     "BJS_APP_TITLE": "ButtressJS CLI",
     "BJS_BUTTRESS_PROTOCOL": "http",
     "BJS_BUTTRESS_URL": "dev.buttressjs.com",
-    "BJS_APP_TOKEN": ""
+    "BJS_APP_TOKEN": "",
+    "BJS_API_PATH": "bjs",
+    "BJS_API_VERSION": 1
   },
   "global": {
     "env": "%NODE_ENV%",
@@ -17,7 +19,9 @@
     "auth": {
       "buttress": {
         "url": "%BJS_BUTTRESS_PROTOCOL%://%BJS_BUTTRESS_URL%",
-        "appToken": "%BJS_APP_TOKEN%"
+        "appToken": "%BJS_APP_TOKEN%",
+        "apiPath": "%BJS_API_PATH%",
+        "apiVersion": "%BJS_API_VERSION%"
       }
     }
   }

@@ -20,4 +20,5 @@ console.log(chalk.white(`${Config.app.title} Tools v${Config.app.version}...`));
 
 program.version(Config.app.version)
   .command('app', 'App related commands')
+  .command('auth', 'Auth related commands')
   .parse(process.argv);

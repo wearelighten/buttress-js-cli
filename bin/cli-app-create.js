@@ -42,8 +42,10 @@ const __execProgram = () => {
 console.log(chalk.white(`Connecting to Buttress...`));
 
 return Buttress.init({
-  buttressUrl: `${Config.auth.buttress.url}/api/v1`,
-  appToken: Config.auth.buttress.appToken
+  buttressUrl: `${Config.auth.buttress.url}`,
+  appToken: Config.auth.buttress.appToken,
+  apiPath: Config.auth.buttress.apiPath,
+  version: Config.auth.buttress.apiVersion
 })
 .then(__execProgram)
 .then(() => {

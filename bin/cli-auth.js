@@ -15,5 +15,5 @@ const program = require('commander');
 const Config = require('node-env-obj')('../');
 
 program.version(Config.app.version)
-  .command('create', 'Create a app with a token')
+  .command('create', 'Create a user with a token')
   .parse(process.argv);

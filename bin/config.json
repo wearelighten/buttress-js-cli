@@ -6,7 +6,8 @@
     "BJS_BUTTRESS_URL": "dev.buttressjs.com",
     "BJS_APP_TOKEN": "",
     "BJS_API_PATH": "bjs",
-    "BJS_API_VERSION": 1
+    "BJS_API_VERSION": 1,
+    "BJS_ALLOW_UNAUTHORIZED": "false"
   },
   "global": {
     "env": "%NODE_ENV%",
@@ -21,7 +22,8 @@
         "url": "%BJS_BUTTRESS_PROTOCOL%://%BJS_BUTTRESS_URL%",
         "appToken": "%BJS_APP_TOKEN%",
         "apiPath": "%BJS_API_PATH%",
-        "apiVersion": "%BJS_API_VERSION%"
+        "apiVersion": "%BJS_API_VERSION%",
+        "allowUnauthorized": "%BJS_ALLOW_UNAUTHORIZED%"
       }
     }
   }

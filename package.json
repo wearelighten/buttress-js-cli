@@ -6,7 +6,7 @@
   "private": true,
   "main": "src/cli.js",
   "dependencies": {
-    "buttress-js-api": "^2.0.0",
+    "buttress-js-api": "^2.4.1",
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "node-env-obj": "^0.1.1"

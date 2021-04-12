@@ -34,7 +34,13 @@ const __execProgram = () => {
     type: options.type,
     authLevel: options.authLevel
   })
-    .then(app => {
+    .then((apps) => {
+      const [app] = apps;
+      if (!app) {
+        console.log(chalk.red(`Failed to create app`));
+        return;
+      }
+
       console.log(chalk.white(`Created App ${chalk.green(app.name)} with token ${chalk.green(app.token)}`));
     });
 };
@@ -45,7 +51,9 @@ return Buttress.init({
   buttressUrl: `${Config.auth.buttress.url}`,
   appToken: Config.auth.buttress.appToken,
   apiPath: Config.auth.buttress.apiPath,
-  version: Config.auth.buttress.apiVersion
+  version: Config.auth.buttress.apiVersion,
+  allowUnauthorized: (Config.auth.buttress.allowUnauthorized === 'true'),
+  update: false,
 })
 .then(__execProgram)
 .then(() => {

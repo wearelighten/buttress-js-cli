@@ -13,7 +13,6 @@
 
 const program = require('commander');
 const chalk = require('chalk');
-const Buttress = require('buttress-js-api');
 const Config = require('./config.js');
 
 console.log(chalk.white(`${Config.app.title} Tools v${Config.app.version}...`));

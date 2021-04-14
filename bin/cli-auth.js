@@ -12,7 +12,7 @@
  */
 
 const program = require('commander');
-const Config = require('node-env-obj')('../');
+const Config = require('./config.js');
 
 program.version(Config.app.version)
   .command('create', 'Create a user with a token')

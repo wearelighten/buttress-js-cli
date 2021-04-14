@@ -14,7 +14,7 @@
 const program = require('commander');
 const chalk = require('chalk');
 const Buttress = require('buttress-js-api');
-const Config = require('node-env-obj')('../');
+const Config = require('./config.js');
 
 program.version(Config.app.version)
   .option('-n, --name <name>', 'The name of the application.')

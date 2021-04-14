@@ -14,7 +14,7 @@
 const program = require('commander');
 const chalk = require('chalk');
 const Buttress = require('buttress-js-api');
-const Config = require('node-env-obj')('../');
+const Config = require('./config.js');
 
 console.log(chalk.white(`${Config.app.title} Tools v${Config.app.version}...`));
 console.log(chalk.white(`URL: ${Config.auth.buttress.url}/${Config.auth.buttress.apiPath} Token: ${Config.auth.buttress.appToken}`));

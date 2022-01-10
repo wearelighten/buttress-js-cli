@@ -1,29 +1,28 @@
 {
   "environment": {
-    "NODE_ENV": "development",
-    "BJS_APP_TITLE": "ButtressJS CLI",
-    "BJS_BUTTRESS_PROTOCOL": "http",
-    "BJS_BUTTRESS_URL": "dev.buttressjs.com",
-    "BJS_APP_TOKEN": "",
-    "BJS_API_PATH": "bjs",
-    "BJS_API_VERSION": 1,
-    "BJS_ALLOW_UNAUTHORIZED": "false"
+    "NODE_ENV": "production",
+    "PROTOCOL": "https",
+    "URL": "",
+    "TOKEN": "",
+    "API_PATH": "bjs",
+    "API_VERSION": 1,
+    "ALLOW_UNAUTHORIZED": "false"
   },
   "global": {
     "env": "%NODE_ENV%",
     "app": {
-      "title": "%BJS_APP_TITLE%",
-      "description": "%BJS_APP_TITLE%.",
+      "title": "ButtressJS CLI",
+      "description": "Basic CLI app for interacting with Buttress.",
       "code": "bjs-cli",
       "version": "1.3.0"
     },
     "auth": {
       "buttress": {
-        "url": "%BJS_BUTTRESS_PROTOCOL%://%BJS_BUTTRESS_URL%",
-        "appToken": "%BJS_APP_TOKEN%",
-        "apiPath": "%BJS_API_PATH%",
-        "apiVersion": "%BJS_API_VERSION%",
-        "allowUnauthorized": "%BJS_ALLOW_UNAUTHORIZED%"
+        "url": "%PROTOCOL%://%URL%",
+        "appToken": "%TOKEN%",
+        "apiPath": "%API_PATH%",
+        "apiVersion": "%API_VERSION%",
+        "allowUnauthorized": "%ALLOW_UNAUTHORIZED%"
       }
     }
   }

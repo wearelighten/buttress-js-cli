@@ -5,10 +5,13 @@
   "author": "Lighten",
   "private": true,
   "main": "src/cli.js",
+  "bin": {
+    "bjs": "bin/cli.js"
+  },
   "dependencies": {
-    "buttress-js-api": "^2.4.1",
+    "buttress-js-api": "^2.5.1",
     "chalk": "^4.1.0",
     "commander": "^7.2.0",
-    "node-env-obj": "^0.2.0"
+    "node-env-obj": "^0.2.1"
   }
 }

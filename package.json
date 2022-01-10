@@ -4,9 +4,9 @@
   "description": "ButtressJS CLI",
   "author": "Lighten",
   "private": true,
-  "main": "src/cli.js",
+  "main": "src/bjs.js",
   "bin": {
-    "bjs": "bin/cli.js"
+    "bjs": "bin/bjs.js"
   },
   "dependencies": {
     "buttress-js-api": "^2.5.1",

@@ -10,7 +10,7 @@
  */
 
 const chalk = require('chalk');
-const Buttress = require('buttress-js-api');
+const Buttress = require('@buttress/api');
 const Config = require('./config.js');
 
 module.exports = (__execProgram) => {

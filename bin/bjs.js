@@ -28,6 +28,7 @@ program.version(Config.app.version);
 
 program.command('app', 'App related commands');
 program.command('auth', 'Auth related commands');
+program.command('data-sharing', 'App Data Sharing related commands');
 
 program.command('help', { isDefault: true })
   .action(() => program.help());

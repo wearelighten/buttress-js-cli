@@ -1,11 +1,6 @@
 {
   "environment": {
     "NODE_ENV": "production",
-    "PROTOCOL": "https",
-    "URL": "",
-    "TOKEN": "",
-    "API_PATH": "bjs",
-    "API_VERSION": 1,
     "ALLOW_UNAUTHORIZED": "false"
   },
   "global": {
@@ -18,10 +13,10 @@
     },
     "auth": {
       "buttress": {
-        "url": "%PROTOCOL%://%URL%",
-        "appToken": "%TOKEN%",
-        "apiPath": "%API_PATH%",
-        "apiVersion": "%API_VERSION%",
+        "url": "",
+        "appToken": "",
+        "apiPath": "",
+        "apiVersion": "1",
         "allowUnauthorized": "%ALLOW_UNAUTHORIZED%"
       }
     }

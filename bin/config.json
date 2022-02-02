@@ -13,6 +13,7 @@
     },
     "auth": {
       "buttress": {
+        "configured": "false",
         "url": "",
         "appToken": "",
         "apiPath": "",

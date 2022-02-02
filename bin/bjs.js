@@ -17,8 +17,12 @@ const program = require('commander');
 const chalk = require('chalk');
 const Config = require('./config.js');
 
-console.log(chalk.white(`${chalk.bold(Config.app.title)} Tools v${chalk.bold(Config.app.version)}...`));
-console.log(chalk.white(`URL: ${chalk.green(`${Config.auth.buttress.url}/${Config.auth.buttress.apiPath}`)} Token: ${chalk.green(Config.auth.buttress.appToken)}`));
+console.log(`${chalk.bold(Config.app.title)} Tools v${chalk.bold(Config.app.version)}...`);
+if (Config.auth.buttress.configured === 'true') {
+  console.log(`URL: ${chalk.green(`${Config.auth.buttress.url}/${Config.auth.buttress.apiPath}`)} Token: ${chalk.green(Config.auth.buttress.appToken)}`);
+} else {
+  console.log(`Add a connection using '${chalk.bold(`bjs connect <url> <token> <apiPath>`)}'`);
+}
 
 program.version(Config.app.version);
 
@@ -111,6 +115,13 @@ const getStore = () => {
 const writeStore = (store) => {
   try {
     fs.writeFileSync(`.connections`, JSON.stringify(store));
+
+    if (store.lastConnection !== null && store.connections[store.lastConnection]) {
+      Config.auth.buttress.url = store.connections[store.lastConnection].url;
+      Config.auth.buttress.appToken = store.connections[store.lastConnection].token;
+      Config.auth.buttress.apiPath = store.connections[store.lastConnection].apiPath;
+      Config.auth.buttress.configured = 'true';
+    }
   } catch (err) {
     console.error(err);
   }

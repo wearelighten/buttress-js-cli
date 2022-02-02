@@ -10,10 +10,11 @@ const Config = require('node-env-obj')({
 try {
   let store = fs.readFileSync(`.connections`, 'utf8');
   store = JSON.parse(store);
-  if (store.lastConnection && store.connections[store.lastConnection]) {
+  if (store.lastConnection !== null && store.connections[store.lastConnection]) {
     Config.auth.buttress.url = store.connections[store.lastConnection].url;
     Config.auth.buttress.appToken = store.connections[store.lastConnection].token;
     Config.auth.buttress.apiPath = store.connections[store.lastConnection].apiPath;
+    Config.auth.buttress.configured = 'true';
   }
 } catch (err) {}
 

@@ -30,3 +30,10 @@ bjs connect 0
 # Remove stored connection details
 bjs delete 0
 ```
+
+## Can't connect to Buttress when using self-signed certs?
+If your using this locally the chances are that you'll be using self signed certs, you can bypass any cert issues by setting or passsing the env flag property `ALLOW_UNAUTHORIZED` in front of the program.
+
+```bash
+ALLOW_UNAUTHORIZED=true bjs list
+```
